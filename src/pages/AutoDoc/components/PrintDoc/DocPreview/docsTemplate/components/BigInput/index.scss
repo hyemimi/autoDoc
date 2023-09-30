@@ -1,0 +1,31 @@
+.big-input {
+  height: 20mm;
+  width: 160mm;
+  display: flex;
+  justify-content: center;
+
+  &-label,
+  &-data {
+    display: flex;
+    align-items: center;
+  }
+  
+  &-label {
+    justify-content: center;
+    width: 20mm;
+    font-weight: bold;
+  }
+
+  &-data {
+    width: 140mm;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-color {
+      @extend .big-input-data;
+      @include highlight;
+      }
+  }
+}

@@ -1,0 +1,198 @@
+
+.cer {
+  &-header {
+    height: 30mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 20px;
+    position: relative;
+    padding-left: 20px;
+
+    &::after {
+      content: '';
+      width: 200px;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 16px);
+      border-bottom: 2px solid $color-black;
+    }
+  }
+
+  &-body {
+    width: 100%;
+    height: calc(249.48mm - 67px);
+    font-size: 15px;
+    
+    &-table,
+    &-etc {
+      width: 100%;
+      height: 40mm;
+      overflow: hidden;
+    }
+
+    &-address,
+    &-duration {
+      border-top: none;
+      width: 160mm;
+      height: 20mm;
+      text-align: center;
+      display: flex;
+      
+      &-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20mm;
+        font-weight: bold;
+      }
+
+      &-data {
+        width: 140mm;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    
+    &-address {
+      &-data {
+        flex-direction: column;
+        &-color {
+          @extend .cer-body-address-data;
+          @include highlight;
+        }
+      }
+    }
+    
+    &-duration {
+      &-data {
+        justify-content: space-around;
+
+        &-left {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          gap: 10px;
+        }
+      }
+    }
+
+    &-etc {
+      text-align: center;
+    }
+
+    &-description {
+      height: 90mm;
+      text-align: center;
+      border-top: none;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-today {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      &-representative {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: end;
+        position: relative;
+    
+        img {
+          position: absolute;
+          bottom: -35px;
+          right: -40px;
+        }
+      }
+    }
+  }
+}
+
+/***********/
+/** border */
+/***********/
+
+.cer {
+  &-body {
+    &-table {
+      border: 1px solid $color-black;
+      
+      .small-input {
+        &:nth-child(odd) {
+          border-right: 1px solid $color-black;
+        }
+      
+        &:not(:nth-child(7), :nth-child(8)) {
+          border-bottom: 1px solid $color-black;
+        }
+        
+        &-label {
+          border-right: 1px solid $color-black;
+        }
+      }
+    }
+
+    &-address,
+    &-duration {
+      border-left: 1px solid $color-black;
+      border-right: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+
+      &-label {
+          border-right: 1px solid $color-black;
+      }
+    }
+
+    &-etc {
+      border-left: 1px solid $color-black;
+      border-right: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+
+      .big-input {
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-black;
+        }
+
+        &-label {
+          border-right: 1px solid $color-black;
+        }
+      }
+    }
+
+    &-description {
+      border-left: 1px solid $color-black;
+      border-right: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
+    }
+  }
+}
+
+
+// .table {
+//   display: flex;
+//   border-collapse: collapse;
+
+//   thead tr,
+//   tbody tr {
+//     display: inline-flex;
+//     flex-direction: column;
+//   }
+
+//   th {
+//   }
+
+//   td {
+//     text-align: center;
+//   }
+// }
+

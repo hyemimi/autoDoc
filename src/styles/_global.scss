@@ -1,0 +1,27 @@
+.header {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: #fff;
+
+    p {
+        width: calc(100% - 200px);
+        min-width: 80px;
+    }
+
+    button {
+        width: 200px;
+        min-width: 70px;
+        margin-right: -20px;
+        height: 30px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+@mixin highlight {
+    font-weight : bold;
+    color : blue;
+}

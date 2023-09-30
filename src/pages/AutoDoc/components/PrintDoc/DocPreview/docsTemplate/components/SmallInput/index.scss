@@ -1,0 +1,30 @@
+.small-input {
+  width: 80mm;
+  height: 10mm;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  &-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20mm;
+    font-weight: bold;
+  }
+
+  &-data {
+    width: 60mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-color {
+    
+    @extend .small-input-data;
+    @include highlight;
+    
+    }
+  }
+
+}

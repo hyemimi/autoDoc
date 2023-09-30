@@ -1,0 +1,24 @@
+.card {
+    position : relative;
+    width : 340px;
+    background-color : $background-color;
+    margin-bottom : 10px;
+   
+   &-title {
+    padding : 5px 10px;
+    text-align: center;
+    font-size : 20px;
+    background-color: $color-white;
+    height : 35px;
+    display : flex;
+    justify-content: space-between;
+   } 
+   &-content {
+    background-color: lighten($color: $background-color, $amount: 30);
+    padding : 10px;
+   }
+
+   &:last-child {
+    margin-bottom : 0px;
+   }
+}

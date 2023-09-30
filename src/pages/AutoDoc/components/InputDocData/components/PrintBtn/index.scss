@@ -1,0 +1,29 @@
+.doc-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: $input-color;
+  width: calc(100% - 360px);
+  text-align: end;
+  padding: 10px;
+
+  button {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    background-color: $color-white;
+  }
+}

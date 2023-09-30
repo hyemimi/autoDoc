@@ -1,0 +1,17 @@
+.docs {
+  width: 160mm;
+  height: 240mm;
+  color: $color-black;
+}
+
+.grid {
+  display: grid;
+
+  &-1 {
+    grid-template-columns: 1fr;
+  }
+
+  &-2 {
+    grid-template-columns: 80mm 80mm;
+  }
+}
